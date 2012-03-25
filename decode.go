@@ -5,8 +5,8 @@ import (
 	"compress/gzip"
 	"encoding/binary"
 	"errors"
-	"io"
 	"fmt"
+	"io"
 
 //	"io/ioutil"
 )
@@ -29,7 +29,6 @@ func DecodeGzip(src io.Reader) (*Compound, error) {
 	io.Copy(buf, r)
 	return Decode(buf)
 }
-
 
 // Decodes an NBT file into a native Go structure.
 func Decode(src io.Reader) (*Compound, error) {

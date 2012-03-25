@@ -2,29 +2,29 @@
 Package nbt provides facilities to encode and decode NBT (Named Binary Tag) data structures. From the Minecraft Coalition Wiki (http://wiki.vg):
     ID   Name           Size    Description
     0    TAG_End        0       This tag serves no purpose but to signify the
-								end of an open TAG_Compound. In most libraries,
-								this type is abstracted away and never seen.
+                                end of an open TAG_Compound. In most libraries,
+                                this type is abstracted away and never seen.
     1    TAG_Byte       1       A single signed byte
     2    TAG_Short      2       A single signed short
     3    TAG_Int        4       A single signed integer
     4    TAG_Long       8       A single signed long (typically long long in
-								C/C++)
+                                C/C++)
     5    TAG_Float      4       A single IEEE-754 single-precision floating
-								point number
+                                point number
     6    TAG_Double     8       A single IEEE-754 double-precision floating
-								point number
+                                point number
     7    TAG_Byte_Array ...     A length-prefixed array of signed bytes. The
-								prefix is a signed integer (thus 4 bytes)
+                                prefix is a signed integer (thus 4 bytes)
     8    TAG_String     ...     A length-prefixed UTF-8 string. The prefix is an
-								unsigned short (thus 2 bytes)
+                                unsigned short (thus 2 bytes)
     9    TAG_List       ...     A list of nameless tags, all of the same type.
-								The list is prefixed with the Type ID of the
-								items it contains (thus 1 byte), and the
-								length of the list as a signed integer (a
-								further 4 bytes).
+                                The list is prefixed with the Type ID of the
+                                items it contains (thus 1 byte), and the
+                                length of the list as a signed integer (a
+                                further 4 bytes).
     10   TAG_Compound   ...     Effectively a list of a named tags
     11   TAG_Int_Array  ...     A length-prefixed array of signed integers. The
-								prefix is presumably a signed integer.
+                                prefix is presumably a signed integer.
 */
 package nbt
 
